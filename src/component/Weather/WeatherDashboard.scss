@@ -1,0 +1,45 @@
+@import 'src/scss/constants.scss';
+
+.dashboard {
+	margin: 0 auto;
+	width: 400px;
+	background-color: $window__bg-color;
+	color: $window__color;
+	border-radius: 5px;
+}
+
+.dashboard__title {
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.dashboard__title h2 {
+	padding: 0.5em 0.5em;
+}
+.dashboard__title img {
+	padding: 1em;
+	width: 64px;
+	border-radius: 50%;
+}
+.dashboard__info-panel {
+	margin: 1.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.dashboard__info-panel div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.dashboard__status {
+	display: flex;
+	font-family: 'Courier New', Courier, monospace;
+	flex-direction: row;
+	justify-content: flex-end;
+	font-size: 0.8em;
+	background-color: $window__acсent_bg-color;
+	padding-right: 0.5em;
+}
