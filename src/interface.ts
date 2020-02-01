@@ -44,3 +44,12 @@ export type IActionCreator =
 export interface IStore {
 	store: IState;
 }
+/** ImgLoader conteiner */
+export interface INewImg {
+	id: string;
+	img: string;
+}
+export interface IImgLoaderItem {
+	item: { id: string; img: string };
+	onRemove: (id: string) => void;
+}

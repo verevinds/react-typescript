@@ -1,0 +1,34 @@
+@import 'src/scss/constants.scss';
+
+.not-found {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 500px;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	color: #fff;
+}
+.not-found__smile {
+	font-size: 200px;
+}
+.not-found__container {
+	text-align: center;
+}
+.not-found__links {
+	color: $window__color;
+	padding: 40px 10px;
+	text-align: left;
+	li {
+		list-style: none;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $primary-color-C;
+}
+a:hover {
+	color: $primary-color;
+}

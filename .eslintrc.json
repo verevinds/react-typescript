@@ -32,6 +32,7 @@
 		"import/resolver": {
 			"typescript": {}
 		},
-		"import/no-unresolved": [2, { "caseSensitive": false }]
+		"import/no-unresolved": [2, { "caseSensitive": false }],
+		"no-lone-blocks": "error"
 	}
 }
