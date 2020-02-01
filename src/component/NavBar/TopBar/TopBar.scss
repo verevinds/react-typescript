@@ -17,31 +17,29 @@
 
 .topbar__brand {
 	margin-left: 0.5rem;
+	a {
+		font-weight: bold;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1.5em;
+	}
 }
-.topbar__brand a {
-	font-weight: bold;
-	color: #fff;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 1.5em;
-}
-
-.topbar__navigation-group ul {
-	list-style: none;
-	display: flex;
-}
-
-.topbar__navigation-group li {
-	padding: 0 0.5rem;
-}
-
-.topbar__navigation-group a {
-	color: #fff;
-	text-decoration: none;
-	text-transform: capitalize;
-}
-
-.topbar__navigation-group a:hover,
-.topbar__navigation-group a:active {
-	color: $primary-color-B;
+.topbar__navigation-group {
+	ul {
+		list-style: none;
+		display: flex;
+		li {
+			padding: 0 0.5rem;
+			a {
+				color: #fff;
+				text-decoration: none;
+				text-transform: capitalize;
+			}
+			a:hover,
+			a:active {
+				color: $primary-color-B;
+			}
+		}
+	}
 }
