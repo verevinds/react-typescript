@@ -1,15 +1,6 @@
-$primary-color: #17a2b8;
-$primary-color__a: #72cfdc;
-$primary-color__b: #4bcadc;
-$primary-color__c: #2f7f8a;
-$primary-color__d: #076a78;
-$primary-color-B: #ffb71c;
-$primary-color-C: #ff2c1c;
+@import 'src/scss/constants.scss';
 
 .topbar {
-	// position: fixed;
-	// top: 0;
-	// left: 0;
 	width: 100%;
 	background-color: $primary-color;
 	height: 56px;
