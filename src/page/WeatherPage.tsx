@@ -8,7 +8,7 @@ import { RootState } from 'src/redux/reducer';
 export const useSelector: TypedUseSelectorHook<RootState> = useReduxSelector;
 
 const WeatherPage: React.FC = () => {
-	const state = useSelector((state) => state);
+	const state = useSelector((state: any) => state);
 	let { isLoading, succeed, location, current } = state.store;
 
 	let weatherdashboard;

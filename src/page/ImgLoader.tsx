@@ -19,7 +19,6 @@ const ImgLoader: React.FC = () => {
 		setState((prev) => prev.filter((item) => item.id !== id));
 	};
 
-	console.log(imgs);
 	return (
 		<div>
 			<ImgLoaderInput setState={setState} />

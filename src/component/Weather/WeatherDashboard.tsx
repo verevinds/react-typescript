@@ -1,11 +1,7 @@
 import React from 'react';
 import './WeatherDashboard.scss';
 import 'src/scss/accent.scss';
-
-interface IWeatherDashboars {
-	location: any;
-	current: any;
-}
+import { IWeatherDashboars } from 'src/interface';
 
 const WeatherDashboars = (props: IWeatherDashboars) => {
 	let { location, current } = props;

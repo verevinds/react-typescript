@@ -53,3 +53,8 @@ export interface IImgLoaderItem {
 	item: { id: string; img: string };
 	onRemove: (id: string) => void;
 }
+/**Weather */
+export interface IWeatherDashboars {
+	location: any;
+	current: any;
+}
