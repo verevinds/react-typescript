@@ -2,10 +2,9 @@ import React, { Fragment, useState } from 'react';
 import TopBar from './TopBar/TopBar';
 import SideBar from './SideBar/SideBar';
 import { SideBarBackdrop } from './SideBar/SideBarBackdrop';
-import { RouteComponentProps } from 'react-router-dom';
 import './NavBar.scss';
 
-const NavBar: React.FunctionComponent<RouteComponentProps<{}> | {}> = () => {
+const NavBar: React.FunctionComponent = () => {
 	const [state, setState] = useState({ sideBarOpen: false });
 	const onToggleHandler = () => {
 		setState({ sideBarOpen: !state.sideBarOpen });
