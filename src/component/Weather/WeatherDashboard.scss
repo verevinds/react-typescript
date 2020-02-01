@@ -43,3 +43,10 @@
 	background-color: $window__acсent_bg-color;
 	padding-right: 0.5em;
 }
+
+@media (max-width: 780px) {
+	.dashboard {
+		border-radius: 0px;
+		width: 100%;
+	}
+}

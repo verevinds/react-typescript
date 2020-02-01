@@ -1,7 +1,9 @@
+@import 'src/scss/constants.scss';
+
 .sidebar {
 	height: 100%;
-	background: #fff;
-	border-right: 5px solid #17a2b8;
+	background: $window__bg-color;
+	border-right: 5px solid $primary-color-C;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -25,15 +27,15 @@
 }
 
 .sidebar li {
-	border-bottom: 1px solid #17a2b8;
+	border-bottom: 1px solid $primary-color-C;
 	padding: 0.5rem 0;
 	margin: 0.5rem 0;
 }
 
 .sidebar a {
-	color: #076a78;
+	color: $window__color;
 	text-decoration: none;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	text-transform: capitalize;
 	cursor: pointer;
 }

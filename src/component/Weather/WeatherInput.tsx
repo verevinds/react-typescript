@@ -8,7 +8,6 @@ const WeatherInput = () => {
 	const dispatch = useDispatch();
 	const handleSubmit = (event: React.FocusEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		console.log(ref.current!.value);
 		dispatch(weatherFetchLocation(ref.current!.value));
 		ref.current!.value = '';
 	};
@@ -16,12 +15,16 @@ const WeatherInput = () => {
 	return (
 		<div className={'search'}>
 			<form onSubmit={handleSubmit}>
-				<input
-					placeholder='Введите название локации'
-					className='search__input'
-					ref={ref}
-					type='search'
-				/>
+				<label>
+					Введите название локации
+					<input
+						id='location'
+						placeholder='Введите название локации'
+						className='search__input'
+						ref={ref}
+						type='search'
+					/>
+				</label>
 
 				<input value={'Посмотреть'} type={'submit'} className={'search__button'} />
 			</form>

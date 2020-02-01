@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from 'src/redux/store';
 import './index.scss';
-import MainPage from './page/MainPage';
+import MainPage from './page/ImgLoader';
 import NavBar from 'src/component/NavBar/NavBar';
 import Footer from 'src/component/Footer/Fotter';
 import WeatherPage from './page/WeatherPage';

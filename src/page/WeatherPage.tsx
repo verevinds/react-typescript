@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactLoading from 'react-loading';
 import WeatherInput from 'src/component/Weather/WeatherInput';
 import WeatherDashboard from 'src/component/Weather/WeatherDashboard';
 import { useSelector as useReduxSelector, TypedUseSelectorHook } from 'react-redux';
@@ -8,12 +9,23 @@ export const useSelector: TypedUseSelectorHook<RootState> = useReduxSelector;
 
 const WeatherPage: React.FC = () => {
 	const state = useSelector((state) => state);
-	console.log(state);
-	let { isLoading, location, current } = state.store;
+	let { isLoading, succeed, location, current } = state.store;
+
+	let weatherdashboard;
+	if (isLoading) {
+		weatherdashboard = <ReactLoading type={'spin'} color={'#ffffff'} className='loading' />;
+	} else if (succeed) {
+		weatherdashboard = location ? (
+			<WeatherDashboard location={location} current={current} />
+		) : (
+			<p className='t-a-c'> Локация не найдена </p>
+		);
+	}
+
 	return (
 		<div>
 			<WeatherInput />
-			{isLoading && location ? <WeatherDashboard location={location} current={current} /> : null}
+			{weatherdashboard}
 		</div>
 	);
 };

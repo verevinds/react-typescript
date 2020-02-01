@@ -8,7 +8,6 @@ const NavBar: React.FunctionComponent = () => {
 	const [state, setState] = useState({ sideBarOpen: false });
 	const onToggleHandler = () => {
 		setState({ sideBarOpen: !state.sideBarOpen });
-		console.log(state);
 	};
 
 	return (

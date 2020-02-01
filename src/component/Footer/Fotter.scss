@@ -1,8 +1,12 @@
+@import 'src/scss/constants.scss';
+
 footer {
 	position: fixed;
 	bottom: 0;
 	padding: 0.5em;
 	width: 100%;
+	font-size: small;
+	height: $footer__height;
 	background: #222;
 	color: #fff;
 	z-index: 50;

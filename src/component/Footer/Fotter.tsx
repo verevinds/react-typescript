@@ -2,7 +2,7 @@ import React from 'react';
 import './Fotter.scss';
 
 const Footer = () => (
-	<footer>
+	<footer className='code'>
 		<p>
 			Verevin Denis <a href='https://github.com/verevinds/'>GitHub</a>
 		</p>

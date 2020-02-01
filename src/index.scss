@@ -14,7 +14,17 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	height: 100%;
 	background-color: $bg-color;
+	color: $window__color;
 }
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+main {
+	margin-bottom: $footer__height;
+}
+.loading {
+	margin: 0 auto;
+}
+.t-a-c {
+	text-align: center;
 }

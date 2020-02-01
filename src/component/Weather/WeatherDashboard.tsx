@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
 import './WeatherDashboard.scss';
 import 'src/scss/accent.scss';
 
@@ -9,7 +8,6 @@ interface IWeatherDashboars {
 }
 
 const WeatherDashboars = (props: IWeatherDashboars) => {
-	// const state = useSelector((state) => state);
 	let { location, current } = props;
 	return (
 		<div className={'dashboard'}>
@@ -23,7 +21,7 @@ const WeatherDashboars = (props: IWeatherDashboars) => {
 
 			<div className='dashboard__info-panel'>
 				<div>
-					<p>Температура:</p> <p className='accent-a'>{current.temperature}</p>
+					<p>Температура:</p> <p className='accent-a'>{current.temperature}&deg;</p>
 				</div>
 				<div>
 					<p>Сила ветра:</p> <p className='accent-f'>{current.wind_speed}км/ч</p>

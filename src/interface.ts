@@ -1,7 +1,8 @@
 import {
 	WEATHER_FETCH_LOCATION,
 	WEATHER_REQUESTED,
-	WEATHER_REQUESTED_SUCCEEDED
+	WEATHER_REQUESTED_SUCCEEDED,
+	WEATHER_REQUESTED_SUCCEEDED_ERROR
 } from 'src/redux/constants';
 export interface ITobBarToggle {
 	onToggleHandler: () => void;
@@ -9,6 +10,7 @@ export interface ITobBarToggle {
 /*State*/
 export interface IState {
 	isLoading: boolean;
+	succeed: boolean;
 	params: {
 		access_key: string;
 		query: string | undefined;
@@ -25,11 +27,18 @@ export interface IWeatherFetchLocation {
 export interface IWeatherRequested {
 	type: WEATHER_REQUESTED;
 }
+export interface IWeatherRequestedSucceededError {
+	type: WEATHER_REQUESTED_SUCCEEDED_ERROR;
+}
 export interface IWeatherRequestedSucceeded {
 	type: WEATHER_REQUESTED_SUCCEEDED;
 	data: any;
 }
-export type IActionCreator = IWeatherFetchLocation | IWeatherRequested | IWeatherRequestedSucceeded;
+export type IActionCreator =
+	| IWeatherFetchLocation
+	| IWeatherRequested
+	| IWeatherRequestedSucceeded
+	| IWeatherRequestedSucceededError;
 
 /* STORE */
 export interface IStore {
