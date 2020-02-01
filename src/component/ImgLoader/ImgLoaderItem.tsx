@@ -15,7 +15,7 @@ const ImgLoaderItem: React.FC<IImgLoaderItem> = ({ item, onRemove }) => {
 			let height = imageLoader.height.valueOf();
 			width < height ? setSize('galary__img-width') : setSize('galary__img-height');
 		};
-	}, []);
+	}, [item]);
 
 	return (
 		<div className='galary__item'>
