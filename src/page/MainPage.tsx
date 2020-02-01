@@ -1,7 +1,11 @@
 import React from 'react';
 
 const MainPage: React.FC = () => {
-	return <h1>Main Page</h1>;
+	return (
+		<div>
+			<h1>Main Page</h1>
+		</div>
+	);
 };
 
 export default React.memo(MainPage);

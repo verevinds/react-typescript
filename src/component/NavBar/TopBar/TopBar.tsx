@@ -22,9 +22,7 @@ const TopBar: React.FC<ITobBarToggle> = (props) => {
 							</NavLink>
 						</li>
 						<li>
-							<NavLink exact to='/'>
-								weather Page
-							</NavLink>
+							<NavLink to='/weather'>weather Page</NavLink>
 						</li>
 					</ul>
 				</div>

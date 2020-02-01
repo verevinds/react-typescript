@@ -2,17 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './index.css';
-import MainPage from './component/MainPage/MainPage';
-import NavBar from './component/NavBar/NavBar';
+import MainPage from './page/MainPage';
+import NavBar from 'src/component/NavBar/NavBar';
+import Footer from 'src/component/Footer/Fotter';
+import WeatherPage from './page/WeatherPage';
 
 ReactDOM.render(
 	<BrowserRouter>
 		<NavBar />
 		<main>
 			<Switch>
-				<Route path='/' component={MainPage} />
+				<Route exact path='/' component={MainPage} />
+				<Route path='/weather' component={WeatherPage} />
 			</Switch>
 		</main>
+		<Footer />
 	</BrowserRouter>,
 	document.getElementById('root')
 );

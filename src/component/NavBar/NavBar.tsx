@@ -15,7 +15,7 @@ const NavBar: React.FunctionComponent<RouteComponentProps<{}> | {}> = () => {
 	return (
 		<Fragment>
 			<TopBar onToggleHandler={onToggleHandler} />
-			<SideBar sideBarOpen={state.sideBarOpen} />
+			<SideBar sideBarOpen={state.sideBarOpen} onToggleHandler={onToggleHandler} />
 			{state.sideBarOpen ? <SideBarBackdrop onToggleHandler={onToggleHandler} /> : null}
 		</Fragment>
 	);
