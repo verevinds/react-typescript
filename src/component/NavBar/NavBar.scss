@@ -1,0 +1,11 @@
+@media (max-width: 780px) {
+	.topbar__navigation-group {
+		display: none;
+	}
+}
+
+@media (min-width: 780px) {
+	.toggle-button {
+		display: none;
+	}
+}

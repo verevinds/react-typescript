@@ -1,0 +1,56 @@
+$primary-color: #17a2b8;
+$primary-color__a: #72cfdc;
+$primary-color__b: #4bcadc;
+$primary-color__c: #2f7f8a;
+$primary-color__d: #076a78;
+$primary-color-B: #ffb71c;
+$primary-color-C: #ff2c1c;
+
+.topbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $primary-color;
+	height: 56px;
+	color: #fff;
+}
+
+.topbar__navigation {
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	align-items: center;
+	padding: 0 1rem;
+}
+
+.topbar__brand {
+	margin-left: 0.5rem;
+}
+.topbar__brand a {
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
+
+.topbar__navigation-group ul {
+	list-style: none;
+	display: flex;
+}
+
+.topbar__navigation-group li {
+	padding: 0 0.5rem;
+}
+
+.topbar__navigation-group a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.topbar__navigation-group a:hover,
+.topbar__navigation-group a:active {
+	color: $primary-color-B;
+}
