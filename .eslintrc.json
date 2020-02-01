@@ -28,6 +28,10 @@
 		"no-restricted-imports": [
 			"error",
 			{ "paths": [{ "name": "foo", "importNames": ["DisallowedObject"] }] }
-		]
+		],
+		"import/resolver": {
+			"typescript": {}
+		},
+		"import/no-unresolved": [2, { "caseSensitive": false }]
 	}
 }
