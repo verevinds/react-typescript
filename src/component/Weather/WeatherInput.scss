@@ -1,0 +1,42 @@
+@import 'src/scss/constants.scss';
+
+.search {
+	width: 500px;
+	margin: 2rem auto;
+	background-color: $window__bg-color;
+}
+
+.search__input::placeholder {
+	color: $primary-color__a;
+}
+.search__input {
+	width: 80%;
+	border: #fff 2px solid;
+	border-right: none;
+	background-color: unset;
+	color: #fff;
+	font-weight: 300;
+	font-size: 14px;
+	padding: 10px;
+}
+.search__button {
+	width: 20%;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 300;
+	font-size: 14px;
+	border: #fff 2px solid;
+	background-color: unset;
+	color: #fff;
+	padding: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 0px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.search__button:hover {
+	color: #fff;
+	background-color: $primary-color__d;
+	border: $primary-color 2px solid;
+}
