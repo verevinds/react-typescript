@@ -1,8 +1,8 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { TopBarToggleButton } from './TopBarToggleButton';
-import { ITobBarToggle } from 'src/interface';
-import './TopBar.scss';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { TopBarToggleButton } from './TopBarToggleButton'
+import { ITobBarToggle } from 'src/interface'
+import './TopBar.scss'
 
 const TopBar: React.FC<ITobBarToggle> = (props) => {
 	return (
@@ -28,7 +28,7 @@ const TopBar: React.FC<ITobBarToggle> = (props) => {
 				</div>
 			</nav>
 		</header>
-	);
-};
+	)
+}
 
-export default React.memo(TopBar);
+export default React.memo(TopBar)

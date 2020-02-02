@@ -1,10 +1,10 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 import {
 	WEATHER_REQUESTED,
 	WEATHER_REQUESTED_SUCCEEDED,
 	WEATHER_REQUESTED_SUCCEEDED_ERROR
-} from './constants';
-import { IState, IActionCreator } from 'src/interface';
+} from './constants'
+import { IState, IActionCreator } from 'src/interface'
 
 const initialState: IState = {
 	isLoading: false,
@@ -15,7 +15,7 @@ const initialState: IState = {
 	},
 	location: null,
 	current: null
-};
+}
 const reducer = (state: IState = initialState, action: IActionCreator): IState => {
 	switch (action.type) {
 		case WEATHER_REQUESTED:
@@ -25,7 +25,7 @@ const reducer = (state: IState = initialState, action: IActionCreator): IState =
 				current: null,
 				isLoading: true,
 				succeed: false
-			};
+			}
 		case WEATHER_REQUESTED_SUCCEEDED:
 			return {
 				...state,
@@ -33,7 +33,7 @@ const reducer = (state: IState = initialState, action: IActionCreator): IState =
 				current: action.data.data.current,
 				isLoading: false,
 				succeed: true
-			};
+			}
 		case WEATHER_REQUESTED_SUCCEEDED_ERROR:
 			return {
 				...state,
@@ -41,12 +41,12 @@ const reducer = (state: IState = initialState, action: IActionCreator): IState =
 				current: null,
 				isLoading: false,
 				succeed: true
-			};
+			}
 	}
-	return state;
-};
+	return state
+}
 const CombineReducers = combineReducers({
 	store: reducer
-});
-export type RootState = ReturnType<typeof CombineReducers>;
-export default CombineReducers;
+})
+export type RootState = ReturnType<typeof CombineReducers>
+export default CombineReducers

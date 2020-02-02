@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import ImgLoaderInput from 'src/component/ImgLoader/ImgLoaderInput';
-import ImgLoaderItem from 'src/component/ImgLoader/ImgLoaderItem';
-import { INewImg } from 'src/interface';
-import 'src/scss/ImgLoaderItem.scss';
+import React, { useState, useEffect } from 'react'
+import ImgLoaderInput from 'src/component/ImgLoader/ImgLoaderInput'
+import ImgLoaderItem from 'src/component/ImgLoader/ImgLoaderItem'
+import { INewImg } from 'src/interface'
+import 'src/scss/ImgLoaderItem.scss'
 
 const ImgLoader: React.FC = () => {
 	useEffect(() => {
-		const saveImgs = JSON.parse(localStorage.getItem('imgs') || '[]') as INewImg[];
-		setState(saveImgs);
-	}, []);
+		const saveImgs = JSON.parse(localStorage.getItem('imgs') || '[]') as INewImg[]
+		setState(saveImgs)
+	}, [])
 
-	const [imgs, setState] = useState<INewImg[]>([]);
+	const [imgs, setState] = useState<INewImg[]>([])
 	useEffect(() => {
-		localStorage.setItem('imgs', JSON.stringify(imgs));
-	}, [imgs]);
+		localStorage.setItem('imgs', JSON.stringify(imgs))
+	}, [imgs])
 
 	const onRemove = (id: number | string) => {
-		setState((prev) => prev.filter((item) => item.id !== id));
-	};
+		setState((prev) => prev.filter((item) => item.id !== id))
+	}
 
 	return (
 		<div>
@@ -29,7 +29,7 @@ const ImgLoader: React.FC = () => {
 				))}
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default React.memo(ImgLoader);
+export default React.memo(ImgLoader)

@@ -1,5 +1,5 @@
-import React from 'react';
-import './Fotter.scss';
+import React from 'react'
+import './Fotter.scss'
 
 const Footer = () => (
 	<footer className='code'>
@@ -8,6 +8,6 @@ const Footer = () => (
 		</p>
 		<p>React+TypeScript+Redux+Saga+Hook</p>
 	</footer>
-);
+)
 
-export default React.memo(Footer);
+export default React.memo(Footer)

@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import 'src/scss/404.scss';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import 'src/scss/404.scss'
 
 const NotFound404 = () => {
 	return (
@@ -24,7 +24,7 @@ const NotFound404 = () => {
 				</div>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default React.memo(NotFound404);
+export default React.memo(NotFound404)

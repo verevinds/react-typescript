@@ -1,10 +1,10 @@
-import React from 'react';
-import './WeatherDashboard.scss';
-import 'src/scss/accent.scss';
-import { IWeatherDashboars } from 'src/interface';
+import React from 'react'
+import './WeatherDashboard.scss'
+import 'src/scss/accent.scss'
+import { IWeatherDashboars } from 'src/interface'
 
 const WeatherDashboars = ({ location, current }: IWeatherDashboars) => {
-	const { localtime, name } = location;
+	const { localtime, name } = location
 	const {
 		weather_icons,
 		temperature,
@@ -15,7 +15,7 @@ const WeatherDashboars = ({ location, current }: IWeatherDashboars) => {
 		cloudcover,
 		uv_index,
 		weather_descriptions
-	} = current;
+	} = current
 
 	return (
 		<div className={'dashboard'}>
@@ -55,7 +55,7 @@ const WeatherDashboars = ({ location, current }: IWeatherDashboars) => {
 				<p>{localtime}</p>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default React.memo(WeatherDashboars);
+export default React.memo(WeatherDashboars)

@@ -1,12 +1,12 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { ITobBarToggle } from 'src/interface';
-import './SideBar.scss';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { ITobBarToggle } from 'src/interface'
+import './SideBar.scss'
 
 const SideBar: React.FC<{ sideBarOpen: boolean } & ITobBarToggle> = (props) => {
-	let classname = ['sidebar'];
+	let classname = ['sidebar']
 	if (props.sideBarOpen) {
-		classname.push('open');
+		classname.push('open')
 	}
 	return (
 		<nav className={classname.join(' ')}>
@@ -23,7 +23,7 @@ const SideBar: React.FC<{ sideBarOpen: boolean } & ITobBarToggle> = (props) => {
 				</li>
 			</ul>
 		</nav>
-	);
-};
+	)
+}
 
-export default React.memo(SideBar);
+export default React.memo(SideBar)

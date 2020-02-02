@@ -1,14 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from 'src/redux/store';
-import './scss/index.scss';
-import MainPage from './page/ImgLoader';
-import NavBar from 'src/component/NavBar/NavBar';
-import Footer from 'src/component/Footer/Fotter';
-import WeatherPage from './page/WeatherPage';
-import NotFound404 from './page/NotFound404';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import store from 'src/redux/store'
+import './scss/index.scss'
+import MainPage from './page/ImgLoader'
+import NavBar from 'src/component/NavBar/NavBar'
+import Footer from 'src/component/Footer/Fotter'
+import WeatherPage from './page/WeatherPage'
+import NotFound404 from './page/NotFound404'
 
 ReactDOM.render(
 	<Provider store={store}>
@@ -25,4 +25,4 @@ ReactDOM.render(
 		</BrowserRouter>
 	</Provider>,
 	document.getElementById('root')
-);
+)
