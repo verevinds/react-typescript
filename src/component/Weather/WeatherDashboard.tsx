@@ -41,17 +41,16 @@ const WeatherDashboars = ({ location, current }: IWeatherDashboars) => {
 					<p>Влажность:</p> <p className='accent-b'>{humidity}%</p>
 				</div>
 				<div>
-					<p>Облачность:</p>
-					<p>{cloudcover}</p>
+					<p>Облачность:</p> <p>{cloudcover}</p>
 				</div>
 				<div>
-					<p>УФ-индекс:</p>
-					<p>{uv_index}</p>
+					<p>УФ-индекс:</p> <p>{uv_index}</p>
 				</div>
 				<div>
 					<p>{weather_descriptions}</p>
 				</div>
 			</div>
+
 			<div className='dashboard__status'>
 				<p>{localtime}</p>
 			</div>
