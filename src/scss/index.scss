@@ -20,7 +20,8 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 main {
-	margin-bottom: $footer__height;
+	position: relative;
+	margin-bottom: $footer__height * 2;
 }
 .loading {
 	margin: 0 auto;
