@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IImgLoaderItem } from 'src/interface';
+import noImage from 'src/image/no-image-icon.png';
 
 const ImgLoaderItem: React.FC<IImgLoaderItem> = ({ item, onRemove }) => {
 	const [image, setState] = useState({ src: '' });
@@ -21,7 +22,7 @@ const ImgLoaderItem: React.FC<IImgLoaderItem> = ({ item, onRemove }) => {
 
 	return (
 		<div className='galary__item'>
-			<img className={size} src={image.src || 'https://via.placeholder.com/150'} alt={image.src} />
+			<img className={size} src={image.src || noImage} alt={image.src} />
 			<button className='delete' value={id} onClick={() => onRemove(id)}>
 				&#128465;
 			</button>
