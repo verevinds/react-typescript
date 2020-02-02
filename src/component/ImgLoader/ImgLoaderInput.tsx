@@ -1,26 +1,23 @@
 import React, { useRef } from 'react';
 import 'src/scss/Input.scss';
-// import 'src/component/Weather/WeatherInput.scss';
+import { INewImg, IImgLoaderInput } from 'src/interface';
 
-interface INewImg {
-	id: number | null;
-	img: string;
-}
-
-const ImgLoaderInput = (props: any) => {
+const ImgLoaderInput: React.FC<IImgLoaderInput> = ({ setState }) => {
 	const ref = useRef<HTMLInputElement>(null);
 
 	const handleSubmit = (event: React.FocusEvent<HTMLFormElement>) => {
 		event.preventDefault();
+
 		const imageLoader = new Image();
 		imageLoader.src = ref.current!.value;
 		imageLoader.onload = () => {
 			const newImg: INewImg = {
 				id: Date.now(),
-				img: ref.current!.value
+				src: ref.current!.value
 			};
-			props.setState((prev: any) => [newImg, ...prev]);
+			setState((prev: any) => [newImg, ...prev]);
 		};
+
 		imageLoader.onerror = (error) => {
 			alert('По этой ссылки нет картинки');
 		};

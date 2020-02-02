@@ -15,7 +15,7 @@ const ImgLoader: React.FC = () => {
 		localStorage.setItem('imgs', JSON.stringify(imgs));
 	}, [imgs]);
 
-	const onRemove = (id: string) => {
+	const onRemove = (id: number | string) => {
 		setState((prev) => prev.filter((item) => item.id !== id));
 	};
 

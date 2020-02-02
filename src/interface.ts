@@ -46,12 +46,15 @@ export interface IStore {
 }
 /** ImgLoader conteiner */
 export interface INewImg {
-	id: string;
-	img: string;
+	id: number | string;
+	src: string;
 }
 export interface IImgLoaderItem {
-	item: { id: string; img: string };
-	onRemove: (id: string) => void;
+	item: INewImg;
+	onRemove: (id: number | string) => void;
+}
+export interface IImgLoaderInput {
+	setState: React.Dispatch<React.SetStateAction<INewImg[]>>;
 }
 /**Weather */
 export interface IWeatherDashboars {
