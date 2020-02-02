@@ -1,8 +1,9 @@
 import {
 	WEATHER_FETCH_LOCATION,
-	WEATHER_REQUESTED,
+	REQUESTED,
 	WEATHER_REQUESTED_SUCCEEDED,
-	WEATHER_REQUESTED_SUCCEEDED_ERROR
+	SUCCEEDED_ERROR,
+	ERROR_CLOSE
 } from 'src/redux/constants'
 export interface ITobBarToggle {
 	onToggleHandler: () => void
@@ -17,6 +18,11 @@ export interface IState {
 	}
 	location: null | object
 	current: null | object
+	error: null | {
+		code: number | null
+		type: string | null
+		info: string
+	}
 }
 
 /*actionCreate*/
@@ -24,11 +30,15 @@ export interface IWeatherFetchLocation {
 	type: WEATHER_FETCH_LOCATION
 	search: string
 }
-export interface IWeatherRequested {
-	type: WEATHER_REQUESTED
+export interface IRequested {
+	type: REQUESTED
 }
-export interface IWeatherRequestedSucceededError {
-	type: WEATHER_REQUESTED_SUCCEEDED_ERROR
+export interface IErrorClose {
+	type: ERROR_CLOSE
+}
+export interface ISucceededError {
+	type: SUCCEEDED_ERROR
+	error: IError
 }
 export interface IWeatherRequestedSucceeded {
 	type: WEATHER_REQUESTED_SUCCEEDED
@@ -36,9 +46,10 @@ export interface IWeatherRequestedSucceeded {
 }
 export type IActionCreator =
 	| IWeatherFetchLocation
-	| IWeatherRequested
+	| IRequested
 	| IWeatherRequestedSucceeded
-	| IWeatherRequestedSucceededError
+	| ISucceededError
+	| IErrorClose
 
 /* STORE */
 export interface IStore {
@@ -87,4 +98,10 @@ export interface IWeatherDashboars {
 		visibility: number
 		is_day: string
 	}
+}
+/**ERROR */
+export interface IError {
+	code: number | null
+	type: string | null
+	info: string
 }

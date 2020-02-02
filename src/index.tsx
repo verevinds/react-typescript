@@ -9,12 +9,14 @@ import NavBar from 'src/component/NavBar/NavBar'
 import Footer from 'src/component/Footer/Fotter'
 import WeatherPage from './page/WeatherPage'
 import NotFound404 from './page/NotFound404'
+import Alert from './component/Alert/Alert'
 
 ReactDOM.render(
 	<Provider store={store}>
 		<BrowserRouter>
 			<NavBar />
 			<main>
+				<Alert />
 				<Switch>
 					<Route exact path='/' component={MainPage} />
 					<Route path='/weather' component={WeatherPage} />

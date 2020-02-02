@@ -1,0 +1,25 @@
+@import 'src/scss/constants.scss';
+
+.alert {
+	position: absolute;
+	width: 100%;
+	top: -32px;
+	left: 0;
+	color: #856404;
+	background-color: #fff3cd;
+	border-color: #ffeeba;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 0.8em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	z-index: 200;
+	pre,
+	p {
+		padding: 5px;
+		margin: auto;
+	}
+}
+.alert-exit {
+	cursor: pointer;
+}

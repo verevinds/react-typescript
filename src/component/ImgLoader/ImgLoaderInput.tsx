@@ -1,16 +1,19 @@
 import React, { useRef } from 'react'
+import { useDispatch } from 'react-redux'
 import 'src/scss/Input.scss'
-import { INewImg, IImgLoaderInput } from 'src/interface'
+import { INewImg, IImgLoaderInput, IError } from 'src/interface'
+import { succeededError, Requested } from 'src/redux/actionCreators'
 
 const ImgLoaderInput: React.FC<IImgLoaderInput> = ({ setState }) => {
 	const ref = useRef<HTMLInputElement>(null)
-
+	const dispatch = useDispatch()
 	const handleSubmit = (event: React.FocusEvent<HTMLFormElement>) => {
 		event.preventDefault()
 
 		const imageLoader = new Image()
 		imageLoader.src = ref.current!.value
 		imageLoader.onload = () => {
+			dispatch(Requested())
 			const newImg: INewImg = {
 				id: Date.now(),
 				src: ref.current!.value
@@ -19,7 +22,12 @@ const ImgLoaderInput: React.FC<IImgLoaderInput> = ({ setState }) => {
 		}
 
 		imageLoader.onerror = (error) => {
-			alert('По этой ссылки нет картинки')
+			const data: IError = {
+				code: 601,
+				type: null,
+				info: `Please specify a valid url identifier using the query parameter.`
+			}
+			dispatch(succeededError(data))
 		}
 	}
 	return (

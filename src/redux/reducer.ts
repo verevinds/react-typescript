@@ -1,9 +1,5 @@
 import { combineReducers } from 'redux'
-import {
-	WEATHER_REQUESTED,
-	WEATHER_REQUESTED_SUCCEEDED,
-	WEATHER_REQUESTED_SUCCEEDED_ERROR
-} from './constants'
+import { REQUESTED, WEATHER_REQUESTED_SUCCEEDED, SUCCEEDED_ERROR, ERROR_CLOSE } from './constants'
 import { IState, IActionCreator } from 'src/interface'
 
 const initialState: IState = {
@@ -14,33 +10,38 @@ const initialState: IState = {
 		query: undefined
 	},
 	location: null,
-	current: null
+	current: null,
+	error: null
 }
 const reducer = (state: IState = initialState, action: IActionCreator): IState => {
 	switch (action.type) {
-		case WEATHER_REQUESTED:
+		case REQUESTED:
 			return {
 				...state,
-				location: null,
-				current: null,
 				isLoading: true,
-				succeed: false
+				succeed: false,
+				error: null
 			}
 		case WEATHER_REQUESTED_SUCCEEDED:
 			return {
 				...state,
 				location: action.data.data.location,
 				current: action.data.data.current,
+				error: null,
 				isLoading: false,
 				succeed: true
 			}
-		case WEATHER_REQUESTED_SUCCEEDED_ERROR:
+		case SUCCEEDED_ERROR:
 			return {
 				...state,
-				location: null,
-				current: null,
+				error: action.error,
 				isLoading: false,
 				succeed: true
+			}
+		case ERROR_CLOSE:
+			return {
+				...state,
+				error: null
 			}
 	}
 	return state
